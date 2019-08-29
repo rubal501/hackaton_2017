@@ -32,9 +32,52 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+
+  //controladores
+
+    //producto
+  'post /producto/info':'ProductoController.infoProducto',
+  'post /producto/nuevo':"ProductoController.productoNuevo",
+  'post /producto/borrar':"ProductoController.eliminaProducto",
+  'post /producto/jalar':"ProductoController.jalaProductos",
+
+    //carrito y compras
+  'post /carrito/agregar':"CompraController.agregarAlCarro",
+  'post /carrito/quitar':"CompraController.quitarDelCarrito",
+  //'post /carrito/comprar':"CarritoController.comprarCarrito",
+
+
+  'post /pais/info': 'PaisController.infoPais',
+  'post /ciudad/info': 'CiudadController.infoCiudad',
+  'post /vendedor/info': 'Usuario_vendedorController.infoVendor',
+  'post /comprador/info': 'Usuario_compradorController.infoComprador',
+  'post /login/client': 'Login_Usuario_compradorController.login',
+  'post /login/partner': 'Login_Usuario_vendedorController.login',
+  'post /sigin/partner': 'Signin_Usuario_vendedorController.createAcount',
+  'post /sigin/client': 'Signin_Usuario_compradorController.createAcount',
+
   '/': {
     view: 'homepage'
-  }
+  },
+  '/noticias':{
+    view: 'blog',
+  },
+  '/carrito':{
+    view: 'cart',
+  },
+  '/productos':{
+    view: 'products',
+  },
+  '/inicio':{
+    view: 'signin',
+  },
+  '/articulo':{
+    view: 'single',
+  },
+  '/panelvendedor':{
+    view: 'vendedor',
+  },
+
 
   /***************************************************************************
   *                                                                          *
